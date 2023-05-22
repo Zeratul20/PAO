@@ -5,6 +5,9 @@ public class StudentBuget extends Student {
         super(id, nume, varsta, telefon, grupa, materii, note);
     }
 
+    public StudentBuget() {
+    }
+
     @Override
     int puncteCredit() {
         int puncte = 0;

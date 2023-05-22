@@ -4,17 +4,20 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Service {
+    static Audit audit = new Audit("C:\\Users\\Vlad Andries\\IdeaProjects\\proiect\\src\\audit.csv");
     public static void case1(List<Student> studenti) {
         Collections.sort(studenti);
         for (Student student : studenti) {
             System.out.println(student);
         }
+        audit.writeActionToCsv("case1");
     }
 
     public static void case2(List<Profesor>profesori) {
         for (Profesor profesor : profesori) {
             System.out.println(profesor);
         }
+        audit.writeActionToCsv("case2");
     }
 
     public static void case3(List<Student>studenti) {
@@ -22,6 +25,7 @@ public class Service {
             if (student.calculeazaMedie() > 5) {
                 System.out.println(student);
             }
+        audit.writeActionToCsv("case3");
     }
 
     public static void case4(List<Student>studenti) {
@@ -30,6 +34,7 @@ public class Service {
                 System.out.println(student);
             }
         }
+        audit.writeActionToCsv("case4");
     }
 
     public static void case5(List<Student>studenti) {
@@ -44,6 +49,7 @@ public class Service {
         for (StudentTaxa studentTaxa : studentiTaxa) {
             System.out.println(studentTaxa);
         }
+        audit.writeActionToCsv("case5");
     }
 
     public static void case6(List<Profesor>profesori) {
@@ -60,6 +66,7 @@ public class Service {
         for (Profesor profesor : profesoriSalariu) {
             System.out.println(profesor);
         }
+        audit.writeActionToCsv("case6");
     }
 
     public static void case7(List<Profesor>profesori, List<Student>studenti) {
@@ -75,6 +82,7 @@ public class Service {
         for (Profesor profesor : profesori) {
             System.out.println(profesor);
         }
+        audit.writeActionToCsv("case7");
     }
 
     public static void case8(List<Student>studenti) {
@@ -85,6 +93,7 @@ public class Service {
             }
         }
         System.out.println("Suma taxelor studentilor care sunt repartizati la taxa este: " + sumaTaxe);
+        audit.writeActionToCsv("case8");
     }
 
     public static void case9(List<Student>studenti) {
@@ -101,6 +110,7 @@ public class Service {
         for (Student student : studenti) {
             System.out.println(student);
         }
+        audit.writeActionToCsv("case9");
     }
 
     public static void case10(List<Student>studenti) {
@@ -114,5 +124,6 @@ public class Service {
                 System.out.println(student);
             }
         }
+        audit.writeActionToCsv("case10");
     }
 }

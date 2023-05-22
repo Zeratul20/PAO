@@ -7,6 +7,9 @@ public class StudentTaxa extends Student implements Comparable<Student>{
         this.taxa = taxa;
     }
 
+    public StudentTaxa() {
+    }
+
     public int getTaxa() {
         return taxa;
     }
